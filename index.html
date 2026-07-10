@@ -1,0 +1,458 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's For Dinner</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md bg-white shadow-sm py-3">
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+
+                <div class="ms-2">
+                    <h1 class="logo-title mb-0 fs-4">What's For Dinner</h1>
+                    <p class="logo-subtitle mb-0">
+                        Your daily meal inspiration
+                    </p>
+                </div>
+            </a>
+
+            <!-- Mobile Button -->
+            <button class="navbar-toggler border-0 shadow-none"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarContent">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <!-- Right Side -->
+            <div class="collapse navbar-collapse justify-content-md-end"
+                id="navbarContent">
+
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link icon-btn" href="#">
+                            <i class="fa-solid fa-bookmark"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link icon-btn" href="#">
+                            <i class="fa-solid fa-rotate-left"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link icon-btn" href="#">
+                            <i class="fa-solid fa-gear"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-lg-3">
+                        <img src="images/avatar-3.jpg"
+                            class="profile-img"
+                            alt="">
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <main>
+
+        <section class="container-xl d-flex justify-content-center align-content-center">
+
+            <div class="card w-100 rounded-5 border-0 shadow-lg">
+
+                <div class="row g-0">
+
+                    <div class="col-md-5 position-relative">
+                        
+                        <img id="recipeImg" src="https://images.unsplash.com/photo-1546793665-c74683f339c1?q=80&w=800&auto=format&fit=crop" class="w-100  object-fit-cover  test  " alt="...">
+                        
+                        <div class="py-2 px-3 bg-white d-flex align-items-center shadow-lg rounded-pill position-absolute top-R">
+                            <i class="fa-solid fa-star text-warning me-2"></i>
+                            <span id="recipeRate" class="fw-bold text-black me-2">4.4</span>
+                            <span id="recipeReviews" class="reviews">(198 reviews)</span>
+                        </div>
+                        
+                        <div class="recipe-info-card bg-white p-4 shadow-lg rounded-4 text-center position-absolute ">
+                            <div class="row align-items-center">
+                                
+                                <!-- Prep Time -->
+                                <div class="col-4 border-end border-light">
+                                <div class="prep-icon mb-2 mx-auto d-flex align-items-center justify-content-center">
+                                    <i class="fa-solid fa-clock fs-4"></i>
+                                </div>
+                                <p class="text-muted small mb-1">Prep Time</p>
+                                <h6  id="prepTime" class="fw-bold mb-0 text-dark">15 min</h6>
+                                </div>
+
+                                <!-- Cook Time -->
+                                <div class="col-4 border-end border-light">
+                                <div class="cook-icon mb-2 mx-auto d-flex align-items-center justify-content-center">
+                                    <i class="fa-solid fa-fire-burner fs-4"></i>
+                                </div>
+                                <p class="text-muted small mb-1">Cook Time</p>
+                                <h6 id="cookTime" class="fw-bold mb-0 text-dark">0 min</h6>
+                                </div>
+
+                                <!-- Servings -->
+                                <div class="col-4">
+                                <div class="servings-icon mb-2 mx-auto d-flex align-items-center justify-content-center">
+                                    <i class="fa-solid fa-users fs-4"></i>
+                                </div>
+                                <p class="text-muted small mb-1">Servings</p>
+                                <h6 id="servings" class="fw-bold mb-0 text-dark">2 people</h6>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-7 p-4">
+
+                        <div class="d-flex justify-content-between">
+
+                            <div>
+
+                                <span  id="difficulty" class="badge bg-success-subtle text-success rounded-pill py-1 px-2 fw-light">
+                                    Easy
+                                </span>
+
+                                <span id="category" class="badge bg-primary-subtle text-primary rounded-pill py-1 px-2 fw-light">
+                                    Mediterranean
+                                </span>
+
+                                <h1 id="recipeTitle" class="fw-bold mt-3">
+                                    Caesar Salad
+                                </h1>
+
+                                <p id="recipeDescription" class="text-secondary">
+                                    Classic salad with crispy romaine and creamy dressing
+                                </p>
+
+                            </div>
+
+                            <div class="d-flex align-items-center gap-2">
+
+                                <button class="btn shadow-sm rounded-3 bg-color">
+
+                                    <i class="fa-solid fa-bookmark "></i>
+
+                                </button>
+
+                                <button class="btn shadow-sm rounded-3 bg-color">
+
+                                    <i class="fa-solid fa-share-nodes "></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <div id="prepWarning" class="alert alert-danger d-flex align-items-center gap-3 my-3 rounded-4 d-none border-0" role="alert">
+                            <i class="fa-solid fa-triangle-exclamation fs-3 text-danger"></i>
+                            <div>
+                                <strong class="d-block">Extended Preparation Time</strong>
+                                <span class="fs-6 text-danger">This recipe requires more than 45 minutes to prepare. Plan accordingly!</span>
+                            </div>
+                        </div>
+
+                        <ul class="nav nav-underline mt-4 justify-content-center" id="myTab" role="tablist">
+
+                            <li id="ingredientsList" class="nav-item me-5" role="presentation">
+
+                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true>
+
+                                    <i class="fa-solid fa-list-check me-2"></i>
+
+                                    Ingredients
+
+                                </button>
+
+                            </li>
+
+                            <li id="instructionsList" class="nav-item me-5" role="presentation">
+
+                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
+
+                                    <i class="fa-solid fa-book-open me-2"></i>
+
+                                    Instructions
+
+                                </button>
+
+                            </li>
+
+                            <li  id="nutritionList" class="nav-item me-5" role="presentation">
+
+                                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">
+
+                                    <i class="fa-solid fa-chart-pie me-2"></i>
+
+                                    Nutrition
+
+                                </button>
+
+                            </li>
+
+                            <li id="tipsList" class="nav-item me-4" role="presentation">
+
+                                <button class="nav-link" id="contact2-tab" data-bs-toggle="tab" data-bs-target="#contact2-tab-pane" type="button" role="tab" aria-controls="contact2-tab-pane" aria-selected="false">
+
+                                    <i class="fa-solid fa-lightbulb me-2"></i>
+
+                                    Chef Tips
+
+                                </button>
+
+                            </li>
+
+                        </ul>
+
+                        <div class="tab-content" id="myTabContent">
+
+                            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+
+                                <div id="ingredientsContainer" class="ingredients-box rounded-4 p-4 mt-4">
+
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+                                        <div class="number">1</div>
+                                        <span class="fs-6">1 large romaine lettuce</span>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+                                        <div class="number">2</div>
+                                        <span class="fs-6">1/2 cup Caesar dressing</span>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+                                        <div class="number">3</div>
+                                        <span class="fs-6">1/2 cup parmesan cheese, shaved</span>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+                                        <div class="number">4</div>
+                                        <span class="fs-6">1 cup croutons</span>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+                                        <div class="number">5</div>
+                                        <span class="fs-6">2 anchovy fillets (optional)</span>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+                                        <div class="number">6</div>
+                                        <span class="fs-6">Lemon wedges</span>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+                                        <div class="number">7</div>
+                                        <span class="fs-6">Black pepper</span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+
+                                <div id="instructionsContainer" class="Instructions-box rounded-4 p-4 mt-4">
+
+                                    <div class="d-flex align-items-center gap-3 mb-4">
+                                        <div class="number-Ins fw-bold">1</div>
+                                        <span class="fs-6">Wash and dry romaine lettuce thoroughly. Tear into bite-sized pieces.</span>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-3 mb-4">
+                                        <div class="number-Ins fw-bold">2</div>
+                                        <span class="fs-6">Place lettuce in a large salad bowl.</span>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-3 mb-4">
+                                        <div class="number-Ins fw-bold">3</div>
+                                        <span class="fs-6">Add Caesar dressing and toss until evenly coated.</span>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-3 mb-4">
+                                        <div class="number-Ins fw-bold">4</div>
+                                        <span class="fs-6">Add croutons and half the parmesan cheese. Toss gently.</span>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-3 mb-4">
+                                        <div class="number-Ins fw-bold">5</div>
+                                        <span class="fs-6">Top with remaining parmesan shavings and anchovies if using.</span>
+                                    </div>
+
+                                    <div class="d-flex align-items-center gap-3 mb-4">
+                                        <div class="number-Ins fw-bold">6</div>
+                                        <span class="fs-6">Serve immediately with lemon wedges and fresh black pepper.</span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                                
+                                <div class="Instructions-box row g-4 p-4 my-3">
+                                    <div class="col-12 col-md-6">
+                                        <div class="nutrition-card shadow-sm">
+                                        <div class="nutrition-info">
+                                            <div class="icon-box icon-calories">
+                                            <i class="fs-5 fas fa-fire"></i>
+                                            </div>
+                                            <span class="text-secondary fw-semibold">Calories</span>
+                                        </div>
+                                        <span id="nutrCalories" class="text-dark fw-bold">320 kcal</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-6">
+                                        <div class="nutrition-card shadow-sm">
+                                        <div class="nutrition-info">
+                                            <div class="icon-box icon-protein">
+                                            <i class="fs-5 fas fa-dumbbell"></i>
+                                            </div>
+                                            <span class="text-secondary fw-semibold">Protein</span>
+                                        </div>
+                                        <span id="nutrProtein" class="text-dark fw-bold">12g</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-6">
+                                        <div class="nutrition-card shadow-sm">
+                                        <div class="nutrition-info">
+                                            <div class="icon-box icon-carbs">
+                                            <i class="fs-5 fas fa-wheat-awn"></i>
+                                            </div>
+                                            <span class="text-secondary fw-semibold">Carbohydrates</span>
+                                        </div>
+                                        <span id="nutrCarbs" class="text-dark fw-bold">18g</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-6">
+                                        <div class="nutrition-card shadow-sm">
+                                        <div class="nutrition-info">
+                                            <div class="icon-box icon-fat">
+                                            <i class="fs-5 fas fa-droplet"></i>
+                                            </div>
+                                            <span class="text-secondary fw-semibold">Fat</span>
+                                        </div>
+                                        <span id="nutrFat" class="text-dark fw-bold">22g</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-6">
+                                        <div class="nutrition-card shadow-sm">
+                                        <div class="nutrition-info">
+                                            <div class="icon-box icon-fiber">
+                                            <i class="fs-5 fas fa-seedling"></i>
+                                            </div>
+                                            <span class="text-secondary fw-semibold">Fiber</span>
+                                        </div>
+                                        <span id="nutrFiber" class="text-dark fw-bold">3g</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-6">
+                                        <div class="nutrition-card shadow-sm">
+                                        <div class="nutrition-info">
+                                            <div class="icon-box icon-sodium">
+                                            <i class="fs-5 fas fa-cube"></i>
+                                            </div>
+                                            <span class="text-secondary fw-semibold">Sodium</span>
+                                        </div>
+                                        <span id="nutrSodium" class="text-dark fw-bold">680mg</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="tab-pane fade" id="contact2-tab-pane" role="tabpanel" aria-labelledby="contact2-tab" tabindex="0">
+
+                                <div id="tipsContainer" class="Instructions-box d-flex flex-column gap-3 p-4 my-3">
+
+                                    <div class="chef-tip-card d-flex align-items-center gap-3 p-4 border-0 rounded-3">
+                                        <div class="text-orange">
+                                        <i class="fas fa-check-circle fs-5"></i>
+                                        </div>
+                                        <div class="text-dark fw-medium">Use cold, crisp lettuce for best texture</div>
+                                    </div>
+
+                                    <div class="chef-tip-card d-flex align-items-center gap-3 p-4 border-0 rounded-3">
+                                        <div class="text-orange">
+                                        <i class="fas fa-check-circle fs-5"></i>
+                                        </div>
+                                        <div class="text-dark fw-medium">Make homemade croutons for better flavor</div>
+                                    </div>
+
+                                    <div class="chef-tip-card d-flex align-items-center gap-3 p-4 border-0 rounded-3">
+                                        <div class="text-orange">
+                                        <i class="fas fa-check-circle fs-5"></i>
+                                        </div>
+                                        <div class="text-dark fw-medium">Add grilled chicken for a complete meal</div>
+                                    </div>
+
+                                    <div class="chef-tip-card d-flex align-items-center gap-3 p-4 border-0 rounded-3">
+                                        <div class="text-orange">
+                                        <i class="fas fa-check-circle fs-5"></i>
+                                        </div>
+                                        <div class="text-dark fw-medium">Don't dress salad until ready to serve</div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <hr class="mt-4">
+
+                        <button id="randomBtn" onclick="randomBtn()" class="btn btn-recipe mt-3">
+
+                            <i class="fa-solid fa-rotate me-2"></i>
+
+                            Try Another Recipe
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
+
+
